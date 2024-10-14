@@ -44,6 +44,80 @@
             font-weight: bold;
             margin-top: 5px;
         }
+        .product .order-section {
+            margin-top: 10px;
+        }
+        .product .quantity {
+            width: 50px;
+            padding: 5px;
+            font-size: 1em;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .final-order-button {
+            padding: 15px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        .final-order-button:hover {
+            background-color: #2ecc71;
+        }
+       
+        /* Full-screen overlay for the popup */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            background-color: white;
+            width: 500px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .popup h3 {
+            margin-top: 0;
+        }
+
+        .popup p {
+            margin-bottom: 20px;
+        }
+
+        .popup .button-group {
+            margin-top: 20px;
+        }
+
+        .popup button {
+            padding: 10px 15px;
+            margin: 0 10px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
@@ -56,7 +130,11 @@
             <img src="4.jpg" alt="Lavender Lover Soap">
             <h3>Lavender Lover (薰衣草精油）90g</h3>
             <p>手作りナマコ石鹸 (ラベンダーエッセンシャルオイル)<br>lavender help to restore skin complexion and reduce acne. Smoothing and moisturising, calming and rejuvenating which will improve sleep quality and brain function. Recommended to treat insomnia.</p>
-            <div class="price">RM21.00  (In Stock)</div>
+            <div class="price">RM21.00  /pcs (In Stock)</div>
+            <div class="order-section">
+                <label for="Lavender Lover (90g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="Lavender Lover (90g)" value="0" min="0" data-price="21" data-name="Lavender Lover (90g)">
+            </div>
         </div>
 
         <!-- Product 2 -->
@@ -64,7 +142,11 @@
             <img src="5.jpg" alt="Rosemary Soap">
             <h3>Rosemary herb green (迷迭香精油</h3>
             <p>手作りナマコ石鹸 (ローズマリーエッセンシャルオイル)<br>Rosemary Oil Benefits Hair Growth. When applied over the scalp rosemary essential oil helps stimulate hair growth. Exellent for healing property, anti-aging and skin repair concertration. Improve memory, increase cellular metabolism and healing.</p>
-            <div class="price">RM21.00  (In Stock)</div>
+            <div class="price">RM21.00  /pcs (In Stock)</div>
+            <div class="order-section">
+                <label for="Rosemary herb green (90g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="Rosemary herb green (90g)" value="0" min="0" data-price="21" data-name="Rosemary herb green (90g)">
+            </div>
         </div>
 
         <!-- Product 3 -->
@@ -72,7 +154,11 @@
             <img src="2.jpg" alt="Lemongrass Soap">
             <h3>Lemon Grass（柠檬草精油）90g</h3>
             <p>手作りナマコ石鹸 (レモングラスエッセンシャルオイル)<br>Lemongrass oil has a light and fresh lemon smell with earthy undertones.Many consider it stimulating, relaxing, soothing and balancing. Excellent property of anti-fungal, insecticidal, antiseptic, and anti-inflammatory. Recommeded to used as aromatherapy to relieve muscle pain, externally to kill bacteria, ward off insects, and reduce body aches, and internally to help your digestive system.</p>
-            <div class="price">RM21.00  (In Stock)</div>
+            <div class="price">RM21.00  /pcs (In Stock)</div>
+            <div class="order-section">
+                <label for="Lemon Grass (90g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="Lemon Grass (90g)" value="0" min="0" data-price="21" data-name="Lemon Grass (90g)">
+            </div>
         </div>
 
         <!-- Product 4 -->
@@ -80,15 +166,23 @@
             <img src="3.jpg" alt="Peppermint Soap">
             <h3> Peppermint (薄荷精油）90g</h3>
             <p>手作りナマコ石鹸 (ペパーミントエッセンシャルオイル)<br>peppermint provide sinus care and other respiratory benefits. Excellent for mental fatigue and depression, refreshing the spirit, refreshing and healing after sun burn. Recommended for those actively involved in high physical activities.</p>
-            <div class="price">RM21.00  (In Stock)</div>
+            <div class="price">RM21.00  /pcs (In Stock)</div>
+            <div class="order-section">
+                <label for="Peppermint (90g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="Peppermint (90g)" value="0" min="0" data-price="21" data-name="Peppermint (90g)">
+            </div>
         </div>
 
         <!-- Product 5 -->
         <div class="product">
             <img src="7.jpg" alt="Nutmeg Soap">
-            <h3>nutmeg (豆蔻香精油) 90g</h3>
-            <p>手作りナマコ石鹸 (カルダモンエッセンシャルオイル)<br>nutmeg essential oil can help relieve muscle pain, swelling and inflammation. Promote circulation. Oil of nutmeg can be natural painkiller and treat menstrual discomfort. Excellent to relieve skin irritation and itchiness, refreshing spirit and stimulating mental agility.</p>
-            <div class="price">RM21.00  (In Stock)</div>
+            <h3>Nutmeg (豆蔻香精油) 90g</h3>
+            <p>手作りナマコ石鹸 (カルダモンエッセンシャルオイル)<br>Nutmeg essential oil can help relieve muscle pain, swelling and inflammation. Promote circulation. Oil of nutmeg can be natural painkiller and treat menstrual discomfort. Excellent to relieve skin irritation and itchiness, refreshing spirit and stimulating mental agility.</p>
+            <div class="price">RM21.00 /pcs (In Stock)</div>
+            <div class="order-section">
+                <label for="Nutmeg (90g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="Nutmeg (90g)" value="0" min="0" data-price="21" data-name="Nutmeg (90g)">
+            </div>
         </div>
 
         <!-- Product 6 -->
@@ -96,7 +190,11 @@
             <img src="1.jpg" alt="Jasmine Sunrise Soap">
             <h3>Jasmine Sunrise (茉莉花香）90g</h3>
             <p>手作りナマコ石鹸 (ジャスミンの香り)<br>Jasmine attributed to its property as an antidepressant, antiseptic, aphrodisiac, antispasmodic, cicatrizant, expectorant, galactagogue. Benefit to control body balance, treat spasms. Stimulated sexual desired and relax.</p>
-            <div class="price">RM21 (In Stock)</div>
+            <div class="price">RM21 /pcs (In Stock)</div>
+            <div class="order-section">
+                <label for="Jasmine Sunrise (90g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="Jasmine Sunrise (90g)" value="0" min="0" data-price="21" data-name="Jasmine Sunrise (90g)">
+            </div>
         </div>
 
         <!-- Product 7 -->
@@ -104,7 +202,7 @@
             <img src="6.jpg" alt="Sandalwood Soap">
             <h3> Sandalwood (檀香精油) 90g</h3>
             <p>手作りナマコ石鹸 (サンダルウッドエッセンシャルオイル)<br>sandalwood oil is natural's best relaxant. With its sadative property and enriching fragrance, this oil soothes nerves, calms your sense and relax your tensed, muscle and blood vessels, repair, rejuvenate and nourishes skin and hair. Augments, cognitive function and power of thinking.</p>
-            <div class="price">RM21  (Out of stock)</div>
+            <div class="price">RM21 /pcs (Out of stock)</div>
         </div>
 
         <!-- Product 8 -->
@@ -112,7 +210,11 @@
             <img src="8.jpg" alt="5 in 1 set collection">
             <h3>5 in 1 set collection 5x50g</h3>
             <p>手作りナマコ石鹸 (スタンダード5in1セットコレクション)<br>A collection set of handmade gamat soap with 5 difference scents.</p>
-            <div class="price">$RM55  (In Stock)</div>
+            <div class="price">$RM55 /set (In Stock)</div>
+            <div class="order-section">
+                <label for="5 in 1 set collection (5x50g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="5 in 1 set collection (5x50g)" value="0" min="0" data-price="55" data-name="5 in 1 set collection(5x50g)">
+            </div>
         </div>
 
         <!-- Product 9 -->
@@ -120,9 +222,77 @@
             <img src="9.jpg" alt="3 in 1 mini set collection ">
             <h3>3 in 1 mini set collection 3x25g</h3>
             <p>手作りナマコ石鹸 (ミニ3in1セットコレクション)<br>A special lovely mini soaps pack with with 3 difference scents, best choice for gifts for your love one</p>
-            <div class="price">RM20  (In Stock)</div>
+            <div class="price">RM20 /set (In Stock)</div>
+            <div class="order-section">
+                <label for="3 in 1 mini set collection (3x25g)">Order Quantity:</label>
+                <input type="number" class="quantity" id="3 in 1 mini set collection (3x25g)" value="0" min="0" data-price="20" data-name="3 in 1 mini set collection (3x25)">
+            </div>
         </div>
     </div>
 
+    <!-- Full-screen overlay and popup -->
+    <div class="overlay" id="popupOverlay">
+        <div class="popup">
+            <h3>Order Summary</h3>
+            <p id="sumMessage">Order summary: </p>
+            <div class="button-group">
+                <a id="emailLink">
+                    <button>Email seller</button>
+                </a>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitOrder() {
+            const products = document.querySelectorAll('.quantity');
+            let orderSummary = '';
+            let sum = '';
+            let totalPrice = 0;
+
+            // Iterate through each product to gather quantity and price
+            products.forEach(product => {
+                const quantity = parseInt(product.value);
+                const price = parseFloat(product.getAttribute('data-price'));
+                const name = product.getAttribute('data-name');
+
+                if (quantity > 0) {
+                    const productTotal = quantity * price;
+                    totalPrice += productTotal;
+                    orderSummary += name + " x " + quantity + "     ---    RM" + productTotal + "\n";
+                 }
+             }
+           );
+
+            if (orderSummary === '') {
+                sum += "No products selected!";
+            } else {
+                orderSummary += "\nTotal: RM" + totalPrice.toFixed(2) + "++ \n\n\n Please confirm your final order through email orcaform@gmail.com, we will quote you shortly";
+                // Display the order summary in a popup window
+                sum += "\n" + orderSummary;
+            }
+
+            // Update the sum message in the popup
+            document.getElementById('sumMessage').innerText = sum;
+
+            // Update the mailto link with the sum
+            const emailLink = document.getElementById('emailLink');
+             emailLink.href = "mailto:orcaform@gmail.com?subject=GamatSoap%20Order%20From&body=The%20sum%20of%20all%20inputs%20is%20" + sum;
+
+
+
+            // Show the popup
+            document.getElementById('popupOverlay').style.display = 'flex';
+        }
+
+        // Cancel button to hide the popup
+        document.getElementById('cancelBtn').addEventListener('click', function() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        });
+    </script>
+
+    <!-- Final order button -->
+    <button class="final-order-button" onclick="submitOrder()">Place Order</button>
 </body>
 </html>
